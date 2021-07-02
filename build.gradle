@@ -12,7 +12,7 @@ dependencies {
 }
 archivesBaseName = 'test_java'
 version=version
-group="net.test.app"
+group="test.app"
 jar {
     manifest {
         attributes 'Implementation-Version': version
@@ -23,11 +23,11 @@ uploadArchives {
     mavenDeployer {
       repository(
         url: "${nexusUrl}/repository/maven-releases") {
-          authentication(userName: nexusUsername, password: nexusPassword)
+          authentication(userName: java-project, password: java-project)
       }
       snapshotRepository(
         url: "${nexusUrl}/repository/maven-snapshots") {
-          authentication(userName: nexusUsername, password: nexusPassword)
+          authentication(userName: java-project, password: java-project)
       }
     }
   }
